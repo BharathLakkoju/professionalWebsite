@@ -268,7 +268,7 @@ export default function HomePage() {
             <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-            <div className="bg-[url(/final_doit.gif)] backdrop:opacity-75 bg-cover h-[20rem] w-full"></div>
+            <div className="bg-[url(https://lbh-resume.vercel.app/final_doit.gif)] backdrop:opacity-75 bg-cover h-[20rem] w-full"></div>
             <div className="flex flex-col">
               <span className="text-xl font-bold w-fit text-zinc-100 dark:text-gray-100 bg-black mt-3 p-1">
                 Task Management App - doit-io
@@ -290,7 +290,7 @@ export default function HomePage() {
             <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-            <div className="bg-[url(/final_tChecker.gif)] backdrop:opacity-75 bg-cover h-[20rem] w-full"></div>
+            <div className="bg-[url(https://lbh-resume.vercel.app/final_tChecker.gif)] backdrop:opacity-75 bg-cover h-[20rem] w-full"></div>
             <div className="flex flex-col items-start">
               <span className="text-xl font-bold w-fit text-zinc-100 dark:text-gray-100 bg-black mt-3 p-1">
                 T&C Privacy Policy Checking Browser Extension - T&Checker
@@ -314,7 +314,7 @@ export default function HomePage() {
             <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-            <div className="bg-[url(/final_aio.gif)] backdrop:opacity-75 bg-cover h-[20rem] w-full"></div>
+            <div className="bg-[url(https://lbh-resume.vercel.app/final_aio.gif)] backdrop:opacity-75 bg-cover h-[20rem] w-full"></div>
             <div className="flex flex-col items-start">
               <span className="text-xl font-bold w-fit text-zinc-100 dark:text-gray-100 bg-black mt-3 p-1">
                 API based Movies and Songs Recommendation App
@@ -336,7 +336,7 @@ export default function HomePage() {
             <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-            <div className="bg-[url(/final_swapi.gif)] backdrop:opacity-75 bg-cover h-[20rem] w-full"></div>
+            <div className="bg-[url(https://lbh-resume.vercel.app/final_swapi.gif)] backdrop:opacity-75 bg-cover h-[20rem] w-full"></div>
             <div className="flex flex-col">
               <span className="text-xl font-bold w-fit text-zinc-100 dark:text-gray-100 bg-black mt-3 p-1">
                 API based StarWars Data showcase app
@@ -352,7 +352,7 @@ export default function HomePage() {
             <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-            <div className="bg-[url(/final_hcf.gif)] backdrop:opacity-75 bg-cover h-[20rem] w-full"></div>
+            <div className="bg-[url(https://lbh-resume.vercel.app/final_hcf.gif)] backdrop:opacity-75 bg-cover h-[20rem] w-full"></div>
             <div className="flex flex-col">
               <span className="text-xl font-bold w-fit text-zinc-100 dark:text-gray-100 bg-black mt-3 p-1">
                 Weather Forecast using city names
@@ -368,7 +368,7 @@ export default function HomePage() {
             <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-            <div className="bg-[url(/final_potato.gif)] backdrop:opacity-75 bg-cover h-[20rem] w-full"></div>
+            <div className="bg-[url(https://lbh-resume.vercel.app/final_potato.gif)] backdrop:opacity-75 bg-cover h-[20rem] w-full"></div>
             <div className="flex flex-col">
               <span className="text-xl font-bold w-fit text-zinc-100 dark:text-gray-100 bg-black mt-3 p-1">
                 Fun project to implement physics in web apps

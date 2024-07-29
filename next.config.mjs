@@ -49,6 +49,12 @@ const nextConfig = {
         hostname: "openweathermap.org",
         port: '',
         pathname: "/**"
+      },
+      {
+        protocol: "https",
+        hostname: "lbh-resume.vercel.app",
+        port: '',
+        pathname: "/**"
       }
     ]
   },
