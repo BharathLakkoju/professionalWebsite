@@ -368,7 +368,7 @@ export default function HomePage() {
             <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-            <div className="bg-[url(https://lbh-resume.vercel.app/final_potato.gif)] backdrop:opacity-75 bg-cover h-[20rem] w-full"></div>
+            <div className="bg-[url(https://lbh-resume.vercel.app/final_potato.gif)] bg-cover h-[20rem] w-full"></div>
             <div className="flex flex-col">
               <span className="text-xl font-bold w-fit text-zinc-100 dark:text-gray-100 bg-black mt-3 p-1">
                 Fun project to implement physics in web apps
