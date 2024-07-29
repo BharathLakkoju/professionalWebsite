@@ -242,8 +242,11 @@ export default function HomePage() {
         <span className="font-medium text-xl">Skills</span>
         <div className="flex flex-col gap-2 mt-3 w-full">
           {skills.map((skill) => (
-            <div key={skill.name} className="flex w-full gap-2">
-              <span className="font-medium min-w-[200px]">{skill.name}</span>
+            <div
+              key={skill.name}
+              className="flex flex-col md:flex-row w-full gap-2"
+            >
+              <span className="font-medium md:min-w-[200px]">{skill.name}</span>
               <div className="flex flex-wrap gap-3">
                 {skill.details.map((detail) => (
                   <div
@@ -268,17 +271,17 @@ export default function HomePage() {
             <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-            <div className="bg-[url(https://lbh-resume.vercel.app/final_doit.gif)] backdrop:opacity-75 bg-cover h-[20rem] w-full"></div>
+            <div className="bg-[url(https://lbh-resume.vercel.app/final_doit.gif)] bg-center bg-cover h-[20rem] w-full"></div>
             <div className="flex flex-col">
               <span className="text-xl font-bold w-fit text-zinc-100 dark:text-gray-100 bg-black mt-3 p-1">
                 Task Management App - doit-io
               </span>
-              <span>
+              <span className="text-sm text-zinc-600 dark:text-gray-300 my-2">
                 A simple task management app built with Next.js, React, Tailwind
                 CSS and PostgreSQL.
               </span>
               <Link href="https://doit-io.vercel.app" target="_blank">
-                <span className="flex items-center justify-start underline font-bold">
+                <span className="flex items-center justify-start underline underline-offset-4 font-medium">
                   <ArrowTopRightIcon className="size-4 mr-1" />
                   link
                 </span>
@@ -290,19 +293,19 @@ export default function HomePage() {
             <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-            <div className="bg-[url(https://lbh-resume.vercel.app/final_tChecker.gif)] backdrop:opacity-75 bg-cover h-[20rem] w-full"></div>
+            <div className="bg-[url(https://lbh-resume.vercel.app/final_tChecker.gif)] bg-right-top bg-cover h-[20rem] w-full"></div>
             <div className="flex flex-col items-start">
               <span className="text-xl font-bold w-fit text-zinc-100 dark:text-gray-100 bg-black mt-3 p-1">
                 T&C Privacy Policy Checking Browser Extension - T&Checker
               </span>
-              <span>
+              <span className="text-sm text-zinc-600 dark:text-gray-300 my-2">
                 A terms and conditions checking web browser extension.
               </span>
               <Link
                 href="https://github.com/bharathlakkoju/T_Checker"
                 target="_blank"
               >
-                <span className="flex items-center justify-start underline font-bold">
+                <span className="flex items-center justify-start underline underline-offset-4 font-medium">
                   <ArrowTopRightIcon className="size-4 mr-1" />
                   link
                 </span>
@@ -314,17 +317,17 @@ export default function HomePage() {
             <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-            <div className="bg-[url(https://lbh-resume.vercel.app/final_aio.gif)] backdrop:opacity-75 bg-cover h-[20rem] w-full"></div>
+            <div className="bg-[url(https://lbh-resume.vercel.app/final_aio.gif)] bg-center bg-cover h-[20rem] w-full"></div>
             <div className="flex flex-col items-start">
               <span className="text-xl font-bold w-fit text-zinc-100 dark:text-gray-100 bg-black mt-3 p-1">
                 API based Movies and Songs Recommendation App
               </span>
-              <span>
+              <span className="text-sm text-zinc-600 dark:text-gray-300 my-2">
                 A simple movies and songs recommendations using Django Rest
                 Framework, tmdb API and spotify API.
               </span>
               <Link href="https://aio-6mmt.onrender.com" target="_blank">
-                <span className="flex items-center justify-start underline font-bold">
+                <span className="flex items-center justify-start underline underline-offset-4 font-medium">
                   <ArrowTopRightIcon className="size-4 mr-1" />
                   link
                 </span>
@@ -336,15 +339,21 @@ export default function HomePage() {
             <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-            <div className="bg-[url(https://lbh-resume.vercel.app/final_swapi.gif)] backdrop:opacity-75 bg-cover h-[20rem] w-full"></div>
-            <div className="flex flex-col">
+            <div className="bg-[url(https://lbh-resume.vercel.app/final_swapi.gif)] bg-center bg-cover h-[20rem] w-full"></div>
+            <div className="flex flex-col items-start">
               <span className="text-xl font-bold w-fit text-zinc-100 dark:text-gray-100 bg-black mt-3 p-1">
                 API based StarWars Data showcase app
               </span>
-              <span>
+              <span className="text-sm text-zinc-600 dark:text-gray-300 my-2">
                 A simple paginated application that displays StarWars data using
                 React, Vite.js, Node.js and axios library.
               </span>
+              <Link href="https://swapitask.netlify.app" target="_blank">
+                <span className="flex items-center justify-start underline font-medium underline-offset-4">
+                  <ArrowTopRightIcon className="size-4 mr-1" />
+                  link
+                </span>
+              </Link>
             </div>
           </div>
           <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start w-full mx-auto p-4 relative">
@@ -352,15 +361,21 @@ export default function HomePage() {
             <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-            <div className="bg-[url(https://lbh-resume.vercel.app/final_hcf.gif)] backdrop:opacity-75 bg-cover h-[20rem] w-full"></div>
+            <div className="bg-[url(https://lbh-resume.vercel.app/final_hcf.gif)] bg-center bg-cover h-[20rem] w-full"></div>
             <div className="flex flex-col">
               <span className="text-xl font-bold w-fit text-zinc-100 dark:text-gray-100 bg-black mt-3 p-1">
                 Weather Forecast using city names
               </span>
-              <span>
+              <span className="text-sm text-zinc-600 dark:text-gray-300 my-2">
                 A simple application that displays weather forecast on city name
                 using HTML5, CSS3, JavaScript and OpenWeatherMap API.
               </span>
+              <Link href="https://hcfweather.netlify.app" target="_blank">
+                <span className="flex items-center justify-start underline underline-offset-4 font-medium">
+                  <ArrowTopRightIcon className="size-4 mr-1" />
+                  link
+                </span>
+              </Link>
             </div>
           </div>
           <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start w-full mx-auto p-4 relative">
@@ -368,15 +383,21 @@ export default function HomePage() {
             <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-            <div className="bg-[url(https://lbh-resume.vercel.app/final_potato.gif)] bg-cover h-[20rem] w-full"></div>
+            <div className="bg-[url(https://lbh-resume.vercel.app/final_potato.gif)] bg-center bg-cover h-[20rem] w-full"></div>
             <div className="flex flex-col">
               <span className="text-xl font-bold w-fit text-zinc-100 dark:text-gray-100 bg-black mt-3 p-1">
                 Fun project to implement physics in web apps
               </span>
-              <span>
+              <span className="text-sm text-zinc-600 dark:text-gray-300 my-2">
                 A fun application that makes user play with potatoes using
                 React, HTML5, CSS3, JavaScript and Node.js.
               </span>
+              <Link href="https://potatoloop.netlify.app" target="_blank">
+                <span className="flex items-center justify-start underline underline-offset-4 font-medium">
+                  <ArrowTopRightIcon className="size-4 mr-1" />
+                  link
+                </span>
+              </Link>
             </div>
           </div>
         </div>
@@ -393,8 +414,10 @@ export default function HomePage() {
               </span>
               <span>May 2023 - July 2023</span>
             </div>
-            <span>SmartInternz</span>
-            <span>
+            <span className="text-zinc-700 dark:text-gray-300 my-1">
+              SmartInternz
+            </span>
+            <span className="text-sm text-zinc-600 dark:text-gray-300">
               Gained experience on developing Salesforce content management and
               development of LWC and implement Apex. Completed Salesforce
               Developer SuperSet with 13 SuperBadges - 80,600 Points - 68 Badges
