@@ -265,7 +265,7 @@ export default function HomePage() {
       <Separator className="dark:bg-gray-200 bg-gray-900 my-7" />
       <div>
         <span className="font-medium text-xl">Projects</span>
-        <div className="mt-3 flex flex-col gap-5">
+        <div className="mt-3 flex flex-col lg:grid lg:grid-cols-3 gap-5">
           <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start w-full mx-auto p-4 relative">
             <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />

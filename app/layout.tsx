@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cx(
-          "antialiased bg-[#f0f7ff] dark:bg-[#111010] max-w-2xl mb-40 flex flex-col mx-4 mt-8 lg:mx-auto dark:bg-dot-white/[0.15] bg-dot-black/[0.2]",
+          "antialiased bg-[#f0f7ff] dark:bg-[#111010] max-w-2xl lg:max-w-7xl mb-40 flex flex-col mx-4 mt-8 lg:mx-auto dark:bg-dot-white/[0.15] bg-dot-black/[0.2]",
           spaceGrotesk.className
         )}
       >
