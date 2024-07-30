@@ -55,6 +55,12 @@ const nextConfig = {
         hostname: "lbh-resume.vercel.app",
         port: '',
         pathname: "/**"
+      },
+      {
+        protocol: "https",
+        hostname: "etimg.etb2bimg.com",
+        port: '',
+        pathname: "/**"
       }
     ]
   },

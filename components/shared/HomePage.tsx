@@ -573,18 +573,22 @@ export default function HomePage() {
           <div className="flex flex-col items-start justify-center mt-3">
             <div className="flex items-start md:items-center flex-col md:flex-row justify-between w-full">
               <span className="font-semibold">
-                Salesforce Developer Virtual Internship
+                Software Developer Internship Trainee
               </span>
-              <span>May 2023 - July 2023</span>
+              <span>4 mo's,&nbsp; April 2024 - Present</span>
             </div>
-            <span className="text-zinc-700 dark:text-gray-300 my-1">
-              SmartInternz
+            <span className="text-zinc-700 dark:text-gray-300 my-2 flex items-center justify-start gap-3">
+              <Image
+                src="https://etimg.etb2bimg.com/photo/80342670.cms"
+                width={28}
+                height={28}
+                alt="ust"
+              />
+              UST Global
             </span>
-            <span className="text-zinc-600 dark:text-gray-300">
-              Gained experience on developing Salesforce content management and
-              development of LWC and implement Apex. Completed Salesforce
-              Developer SuperSet with 13 SuperBadges - 80,600 Points - 68 Badges
-              - Expeditioner Rank
+            <span className="text-zinc-600 dark:text-gray-300 flex flex-col">
+              <span>- Currently working on learning Java Fundamentals.</span>
+              <span> - Java, Git, SQL.</span>
             </span>
           </div>
         </div>
@@ -656,8 +660,65 @@ export default function HomePage() {
       <Separator className="dark:bg-gray-200 bg-gray-900 my-7" />
       <div>
         <span className="font-medium text-xl">Certifications</span>
-        <div className="flex gap-3">
-          <div className="flex">
+        <div className="lg:flex lg:flex-row-reverse lg:justify-around lg:items-end hidden mt-10">
+          <div className="">
+            <Image
+              width={100}
+              height={50}
+              className="shadow-lg pointer-events-none"
+              src="/wiproTalentNext.png"
+              alt="wiproTalentNext"
+            />
+          </div>
+          <div className="-ml-5">
+            <Image
+              width={100}
+              height={50}
+              className="shadow-lg pointer-events-none"
+              src="/BackendDevelopment.png"
+              alt="wiproTalentNext"
+            />
+          </div>
+          <div className="">
+            <Image
+              width={100}
+              height={50}
+              className="shadow-lg pointer-events-none"
+              src="/AdvancedReact.png"
+              alt="wiproTalentNext"
+            />
+          </div>
+          <div className="">
+            <Image
+              width={100}
+              height={50}
+              className="shadow-lg pointer-events-none"
+              src="/FrontendLibraries.png"
+              alt="wiproTalentNext"
+            />
+          </div>
+          <div className="block">
+            <Image
+              width={100}
+              height={50}
+              className="shadow-lg pointer-events-none"
+              src="/masai.png"
+              alt="wiproTalentNext"
+            />
+          </div>
+        </div>
+        <div className="flex lg:flex-col gap-3">
+          <div className="lg:h-[1rem] lg:block hidden">
+            <Separator className="dark:bg-purple-500 bg-gradient-to-r from-orange-400 to-purple-400 h-1 rounded-full mt-7 w-[calc(100%-8rem)] flex ml-4" />
+            <div className="flex items-center justify-around w-full relative z-10 -translate-y-4">
+              <CircleCheck className="size-7 text-green-100 bg-green-400 rounded-full" />
+              <CircleCheck className="size-7 text-green-100 bg-green-400 rounded-full" />
+              <CircleCheck className="size-7 text-green-100 bg-green-400 rounded-full" />
+              <CircleCheck className="size-7 text-green-100 bg-green-400 rounded-full" />
+              <CircleCheck className="size-7 text-green-100 bg-green-400 rounded-full" />
+            </div>
+          </div>
+          <div className="flex lg:hidden">
             <Separator
               orientation="vertical"
               className="dark:bg-purple-500 bg-gradient-to-b from-orange-400 to-purple-400 w-1 rounded-full mt-7 h-[calc(100%-2rem)] flex ml-4"
@@ -670,21 +731,17 @@ export default function HomePage() {
               <CircleCheck className="size-7 mt-24 lg:mt-0 text-blue-100 bg-blue-400 rounded-full" />
             </div>
           </div>
-          <div className="flex flex-col items-start justify-center mt-3 gap-7 lg:gap-5">
+          <div className="flex flex-col lg:flex-row-reverse items-start justify-center mt-3 gap-7 lg:gap-5">
             <Link
-              href="/wiproTalenNext.png"
-              // ref={textRef1}
+              href="https://lbh-resume.vercel.app/wiproTalentNext.png"
+              target="_blank"
               className="flex flex-col lg:flex-row cursor-pointer gap-3 lg:gap-5"
-              // onMouseEnter={(e) => handleCertMouseEnter(e, textRef1)}
-              // onMouseMove={(e) => handleCertMouseMove(e, textRef1)}
-              // onMouseLeave={handleCertMouseLeave}
             >
-              <div>
+              <div className="block lg:hidden">
                 <Image
                   width={100}
                   height={50}
                   className="shadow-lg pointer-events-none"
-                  // style={{ top: position.y + 20, left: position.x + 20 }}
                   src="/wiproTalentNext.png"
                   alt="wiproTalentNext"
                 />
@@ -701,20 +758,14 @@ export default function HomePage() {
               </div>
             </Link>
             <Link
-              href="/BackendDevelopment.png"
-              // ref={textRef2}
-              // className="relative inline-block cursor-pointer"
+              href="https://lbh-resume.vercel.app/BackendDevelopment.png"
               className="flex flex-col lg:flex-row cursor-pointer gap-5"
-              // onMouseEnter={(e) => handleCertMouseEnter(e, textRef2)}
-              // onMouseMove={(e) => handleCertMouseMove(e, textRef2)}
-              // onMouseLeave={handleCertMouseLeave}
             >
-              <div>
+              <div className="block lg:hidden">
                 <Image
                   width={100}
                   height={50}
                   className="shadow-lg pointer-events-none"
-                  // style={{ top: position.y + 20, left: position.x + 20 }}
                   src="/BackendDevelopment.png"
                   alt="wiproTalentNext"
                 />
@@ -731,20 +782,15 @@ export default function HomePage() {
               </div>
             </Link>
             <Link
-              href="/AdvancedReact.png"
-              // ref={textRef3}
-              // className="relative inline-block cursor-pointer"
+              href="https://lbh-resume.vercel.app/AdvancedReact.png"
+              target="_blank"
               className="flex flex-col lg:flex-row cursor-pointer gap-3 lg:gap-5"
-              // onMouseEnter={(e) => handleCertMouseEnter(e, textRef3)}
-              // onMouseMove={(e) => handleCertMouseMove(e, textRef3)}
-              // onMouseLeave={handleCertMouseLeave}
             >
-              <div>
+              <div className="block lg:hidden">
                 <Image
                   width={100}
                   height={50}
                   className="relative z-10 border border-gray-300 shadow-lg pointer-events-none"
-                  // style={{ top: position.y + 20, left: position.x + 20 }}
                   src="/AdvancedReact.png"
                   alt="wiproTalentNext"
                 />
@@ -761,20 +807,14 @@ export default function HomePage() {
               </div>
             </Link>
             <Link
-              href="/FrontendLibraries.png"
+              href="https://lbh-resume.vercel.app/FrontendLibraries.png"
               className="flex flex-col lg:flex-row cursor-pointer gap-5"
-              // ref={textRef4}
-              // className="relative inline-block cursor-pointer"
-              // onMouseEnter={(e) => handleCertMouseEnter(e, textRef4)}
-              // onMouseMove={(e) => handleCertMouseMove(e, textRef4)}
-              // onMouseLeave={handleCertMouseLeave}
             >
-              <div>
+              <div className="block lg:hidden">
                 <Image
                   width={100}
                   height={50}
                   className="relative z-10 border border-gray-300 shadow-lg pointer-events-none"
-                  // style={{ top: position.y + 20, left: position.x + 20 }}
                   src="/FrontendLibraries.png"
                   alt="wiproTalentNext"
                 />
@@ -791,20 +831,14 @@ export default function HomePage() {
               </div>
             </Link>
             <Link
-              href="/masai.png"
+              href="https://lbh-resume.vercel.app/masai.png"
               className="flex flex-col lg:flex-row cursor-pointer gap-5"
-              // ref={textRef5}
-              // onMouseEnter={(e) => handleCertMouseEnter(e, textRef5)}
-              // onMouseMove={(e) => handleCertMouseMove(e, textRef5)}
-              // onMouseLeave={handleCertMouseLeave}
-              // className="relative inline-block cursor-pointer"
             >
-              <div>
+              <div className="block lg:hidden">
                 <Image
                   width={100}
                   height={50}
-                  className="relative z-10 border border-gray-300 shadow-lg pointer-events-none"
-                  // style={{ top: position.y + 20, left: position.x + 20 }}
+                  className="shadow-lg pointer-events-none"
                   src="/masai.png"
                   alt="wiproTalentNext"
                 />
