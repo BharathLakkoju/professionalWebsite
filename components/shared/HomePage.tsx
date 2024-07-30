@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Icon } from "@/components/ui/evervault-card";
 import Link from "next/link";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
+import { CircleCheck } from "lucide-react";
 
 const skills = [
   {
@@ -227,6 +228,69 @@ const skills = [
 ];
 
 export default function HomePage() {
+  const [isHovered1, setIsHovered1] =
+    React.useState<React.RefObject<HTMLDivElement>>();
+  const [position, setPosition] = React.useState({ x: 0, y: 0 });
+  const textRef1 = React.useRef<HTMLDivElement>(null);
+  const textRef2 = React.useRef<HTMLDivElement>(null);
+  const textRef3 = React.useRef<HTMLDivElement>(null);
+  const textRef4 = React.useRef<HTMLDivElement>(null);
+  const textRef5 = React.useRef<HTMLDivElement>(null);
+  const videoRef1 = React.useRef<HTMLVideoElement>(null);
+  const videoRef2 = React.useRef<HTMLVideoElement>(null);
+  const videoRef3 = React.useRef<HTMLVideoElement>(null);
+  const videoRef4 = React.useRef<HTMLVideoElement>(null);
+  const videoRef5 = React.useRef<HTMLVideoElement>(null);
+  const videoRef6 = React.useRef<HTMLVideoElement>(null);
+
+  const handleCertMouseEnter = (
+    e: React.MouseEvent,
+    textRef: React.RefObject<HTMLDivElement>
+  ) => {
+    setIsHovered1(textRef);
+    updateCertPosition(e, textRef);
+  };
+
+  const handleCertMouseMove = (
+    e: React.MouseEvent,
+    textRef: React.RefObject<HTMLDivElement>
+  ) => {
+    updateCertPosition(e, textRef);
+  };
+
+  const handleCertMouseLeave = () => {
+    setIsHovered1(undefined);
+  };
+
+  const updateCertPosition = (
+    e: React.MouseEvent,
+    textRef: React.RefObject<HTMLDivElement>
+  ) => {
+    if (textRef.current) {
+      const { left, top } = textRef.current.getBoundingClientRect();
+      setPosition({
+        x: e.clientX - left,
+        y: e.clientY - top,
+      });
+    }
+  };
+
+  const handleVideoMouseEnter = (
+    videoRef: React.RefObject<HTMLVideoElement>
+  ) => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  };
+
+  const handleVideoMouseLeave = (
+    videoRef: React.RefObject<HTMLVideoElement>
+  ) => {
+    if (videoRef.current) {
+      videoRef.current.pause();
+    }
+  };
+
   return (
     <>
       <div className="flex justify-center items-center gap-2 text-xl text-zinc-900 dark:text-gray-100 mt-7">
@@ -263,24 +327,42 @@ export default function HomePage() {
         </div>
       </div>
       <Separator className="dark:bg-gray-200 bg-gray-900 my-7" />
+      {/* Projects */}
       <div>
         <span className="font-medium text-xl">Projects</span>
         <div className="mt-3 flex flex-col lg:grid lg:grid-cols-3 gap-5">
-          <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start w-full mx-auto p-4 relative">
+          <div
+            className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start w-full mx-auto p-4 relative"
+            onMouseEnter={() => handleVideoMouseEnter(videoRef1)}
+            onMouseLeave={() => handleVideoMouseLeave(videoRef1)}
+          >
             <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-            <div className="bg-[url(https://lbh-resume.vercel.app/final_doit.gif)] bg-center bg-cover h-[20rem] w-full"></div>
+            <div className="bg-center bg-cover h-[20rem] w-full">
+              <video
+                ref={videoRef1}
+                className="object-cover h-full w-full"
+                src="/final_doit.mp4"
+                loop
+                muted
+                playsInline
+              ></video>
+            </div>
             <div className="flex flex-col">
               <span className="text-xl font-bold w-fit text-zinc-100 dark:text-gray-100 bg-black mt-3 p-1">
                 Task Management App - doit-io
               </span>
-              <span className="text-sm text-zinc-600 dark:text-gray-300 my-2">
+              <span className="text-sm text-zinc-700 dark:text-gray-300 my-2">
                 A simple task management app built with Next.js, React, Tailwind
                 CSS and PostgreSQL.
               </span>
-              <Link href="https://doit-io.vercel.app" target="_blank">
+              <Link
+                href="https://doit-io.vercel.app"
+                target="_blank"
+                className="w-fit"
+              >
                 <span className="flex items-center justify-start underline underline-offset-4 font-medium">
                   <ArrowTopRightIcon className="size-4 mr-1" />
                   link
@@ -288,17 +370,30 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-          <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start w-full mx-auto p-4 relative">
+          <div
+            className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start w-full mx-auto p-4 relative"
+            onMouseEnter={() => handleVideoMouseEnter(videoRef2)}
+            onMouseLeave={() => handleVideoMouseLeave(videoRef2)}
+          >
             <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-            <div className="bg-[url(https://lbh-resume.vercel.app/final_tChecker.gif)] bg-right-top bg-cover h-[20rem] w-full"></div>
+            <div className="bg-center bg-cover h-[20rem] w-full">
+              <video
+                ref={videoRef2}
+                className="object-cover h-full w-full"
+                src="/final_tChecker.mp4"
+                loop
+                muted
+                playsInline
+              ></video>
+            </div>
             <div className="flex flex-col items-start">
               <span className="text-xl font-bold w-fit text-zinc-100 dark:text-gray-100 bg-black mt-3 p-1">
                 T&C Privacy Policy Checking Browser Extension - T&Checker
               </span>
-              <span className="text-sm text-zinc-600 dark:text-gray-300 my-2">
+              <span className="text-sm text-zinc-700 dark:text-gray-300 my-2">
                 A terms and conditions checking web browser extension.
               </span>
               <Link
@@ -312,21 +407,38 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-          <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start w-full mx-auto p-4 relative">
+          <div
+            className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start w-full mx-auto p-4 relative"
+            onMouseEnter={() => handleVideoMouseEnter(videoRef3)}
+            onMouseLeave={() => handleVideoMouseLeave(videoRef3)}
+          >
             <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-            <div className="bg-[url(https://lbh-resume.vercel.app/final_aio.gif)] bg-center bg-cover h-[20rem] w-full"></div>
+            <div className="bg-center bg-cover h-[20rem] w-full">
+              <video
+                ref={videoRef3}
+                className="object-cover h-full w-full"
+                src="/final_aio.mp4"
+                loop
+                muted
+                playsInline
+              ></video>
+            </div>
             <div className="flex flex-col items-start">
               <span className="text-xl font-bold w-fit text-zinc-100 dark:text-gray-100 bg-black mt-3 p-1">
                 API based Movies and Songs Recommendation App
               </span>
-              <span className="text-sm text-zinc-600 dark:text-gray-300 my-2">
+              <span className="text-sm text-zinc-700 dark:text-gray-300 my-2">
                 A simple movies and songs recommendations using Django Rest
                 Framework, tmdb API and spotify API.
               </span>
-              <Link href="https://aio-6mmt.onrender.com" target="_blank">
+              <Link
+                href="https://aio-6mmt.onrender.com"
+                target="_blank"
+                className="w-fit"
+              >
                 <span className="flex items-center justify-start underline underline-offset-4 font-medium">
                   <ArrowTopRightIcon className="size-4 mr-1" />
                   link
@@ -334,21 +446,38 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-          <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start w-full mx-auto p-4 relative">
+          <div
+            className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start w-full mx-auto p-4 relative"
+            onMouseEnter={() => handleVideoMouseEnter(videoRef4)}
+            onMouseLeave={() => handleVideoMouseLeave(videoRef4)}
+          >
             <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-            <div className="bg-[url(https://lbh-resume.vercel.app/final_swapi.gif)] bg-center bg-cover h-[20rem] w-full"></div>
+            <div className="bg-center bg-cover h-[20rem] w-full">
+              <video
+                ref={videoRef4}
+                className="object-cover h-full w-full"
+                src="/final_swapi.mp4"
+                loop
+                muted
+                playsInline
+              ></video>
+            </div>
             <div className="flex flex-col items-start">
               <span className="text-xl font-bold w-fit text-zinc-100 dark:text-gray-100 bg-black mt-3 p-1">
                 API based StarWars Data showcase app
               </span>
-              <span className="text-sm text-zinc-600 dark:text-gray-300 my-2">
+              <span className="text-sm text-zinc-700 dark:text-gray-300 my-2">
                 A simple paginated application that displays StarWars data using
                 React, Vite.js, Node.js and axios library.
               </span>
-              <Link href="https://swapitask.netlify.app" target="_blank">
+              <Link
+                href="https://swapitask.netlify.app"
+                target="_blank"
+                className="w-fit"
+              >
                 <span className="flex items-center justify-start underline font-medium underline-offset-4">
                   <ArrowTopRightIcon className="size-4 mr-1" />
                   link
@@ -356,21 +485,38 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-          <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start w-full mx-auto p-4 relative">
+          <div
+            className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start w-full mx-auto p-4 relative"
+            onMouseEnter={() => handleVideoMouseEnter(videoRef5)}
+            onMouseLeave={() => handleVideoMouseLeave(videoRef5)}
+          >
             <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-            <div className="bg-[url(https://lbh-resume.vercel.app/final_hcf.gif)] bg-center bg-cover h-[20rem] w-full"></div>
+            <div className="bg-center bg-cover h-[20rem] w-full">
+              <video
+                ref={videoRef5}
+                className="object-cover h-full w-full"
+                src="/final_hcf.mp4"
+                loop
+                muted
+                playsInline
+              ></video>
+            </div>
             <div className="flex flex-col">
               <span className="text-xl font-bold w-fit text-zinc-100 dark:text-gray-100 bg-black mt-3 p-1">
                 Weather Forecast using city names
               </span>
-              <span className="text-sm text-zinc-600 dark:text-gray-300 my-2">
+              <span className="text-sm text-zinc-700 dark:text-gray-300 my-2">
                 A simple application that displays weather forecast on city name
                 using HTML5, CSS3, JavaScript and OpenWeatherMap API.
               </span>
-              <Link href="https://hcfweather.netlify.app" target="_blank">
+              <Link
+                href="https://hcfweather.netlify.app"
+                target="_blank"
+                className="w-fit"
+              >
                 <span className="flex items-center justify-start underline underline-offset-4 font-medium">
                   <ArrowTopRightIcon className="size-4 mr-1" />
                   link
@@ -378,21 +524,38 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-          <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start w-full mx-auto p-4 relative">
+          <div
+            className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start w-full mx-auto p-4 relative"
+            onMouseEnter={() => handleVideoMouseEnter(videoRef6)}
+            onMouseLeave={() => handleVideoMouseLeave(videoRef6)}
+          >
             <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-            <div className="bg-[url(https://lbh-resume.vercel.app/final_potato.gif)] bg-center bg-cover h-[20rem] w-full"></div>
+            <div className="bg-center bg-cover h-[20rem] w-full">
+              <video
+                ref={videoRef6}
+                className="object-cover h-full w-full"
+                src="/final_potato.mp4"
+                loop
+                muted
+                playsInline
+              ></video>
+            </div>
             <div className="flex flex-col">
               <span className="text-xl font-bold w-fit text-zinc-100 dark:text-gray-100 bg-black mt-3 p-1">
                 Fun project to implement physics in web apps
               </span>
-              <span className="text-sm text-zinc-600 dark:text-gray-300 my-2">
+              <span className="text-sm text-zinc-700 dark:text-gray-300 my-2">
                 A fun application that makes user play with potatoes using
                 React, HTML5, CSS3, JavaScript and Node.js.
               </span>
-              <Link href="https://potatoloop.netlify.app" target="_blank">
+              <Link
+                href="https://potatoloop.netlify.app"
+                target="_blank"
+                className="w-fit"
+              >
                 <span className="flex items-center justify-start underline underline-offset-4 font-medium">
                   <ArrowTopRightIcon className="size-4 mr-1" />
                   link
@@ -417,7 +580,7 @@ export default function HomePage() {
             <span className="text-zinc-700 dark:text-gray-300 my-1">
               SmartInternz
             </span>
-            <span className="text-sm text-zinc-600 dark:text-gray-300">
+            <span className="text-zinc-600 dark:text-gray-300">
               Gained experience on developing Salesforce content management and
               development of LWC and implement Apex. Completed Salesforce
               Developer SuperSet with 13 SuperBadges - 80,600 Points - 68 Badges
@@ -430,72 +593,203 @@ export default function HomePage() {
       {/* Education */}
       <div className="">
         <span className="font-medium text-xl">Education</span>
-        <div className="flex flex-col items-start justify-center mt-3">
-          <div className="flex items-start md:items-center flex-col md:flex-row justify-between w-full">
-            <span>Maharaj Vijayaram Gajapathi Raj College of Engineering</span>
-            <span>2020 - 2024</span>
-          </div>
-          <div className="text-sm text-gray-600 dark:text-gray-300 flex flex-col">
-            <span>Bachelor of Technology, Information Technology</span>
-            <span>CGPA: 8.10</span>
+        <div className="lg:h-[1rem] lg:block hidden">
+          <Separator className="dark:bg-purple-500 bg-gradient-to-r from-blue-400 to-green-400 h-1 rounded-full mt-7 w-[calc(100%-8rem)] flex ml-4" />
+          <div className="flex items-center justify-around w-full relative z-10 -translate-y-4">
+            <CircleCheck className="size-7 text-green-100 bg-green-400 rounded-full" />
+            <CircleCheck className="size-7 text-green-100 bg-green-400 rounded-full" />
+            <CircleCheck className="size-7 text-green-100 bg-green-400 rounded-full" />
           </div>
         </div>
-        <div className="flex flex-col items-start justify-center mt-3">
-          <div className="flex items-center justify-between w-full">
-            <span>Sri Chaitanya Jr. College</span>
-            <span>2018 - 2020</span>
+        <div className="flex">
+          <div className="lg:h-[1rem] lg:hidden flex">
+            <Separator
+              orientation="vertical"
+              className="dark:bg-purple-500 bg-gradient-to-b from-blue-400 to-green-400 w-1 rounded-full mt-7 h-[calc(100%-2rem)] flex ml-4"
+            />
+            <div className="flex flex-col items-center justify-around w-full relative z-10 -translate-x-4">
+              <CircleCheck className="size-7 text-green-100 bg-green-400 rounded-full" />
+              <CircleCheck className="size-7 text-green-100 bg-green-400 rounded-full" />
+              <CircleCheck className="size-7 text-green-100 bg-green-400 rounded-full" />
+            </div>
           </div>
-          <div className="text-sm text-gray-600 dark:text-gray-300 flex flex-col">
-            <span>CGPA: 9.50</span>
-          </div>
-        </div>
-        <div className="flex flex-col items-start justify-center mt-3">
-          <div className="flex items-center justify-between w-full">
-            <span>Sri Chaitanya Techno School</span>
-            <span>2017 - 2018</span>
-          </div>
-          <div className="text-sm text-gray-600 dark:text-gray-300 flex flex-col">
-            <span>CGPA: 10.0</span>
+          <div className="lg:px-10 flex flex-col lg:flex-row items-start justify-center">
+            <div className="flex flex-col w-[300px] lg:w-[500px] items-start justify-start mt-3 py-5 lg:py-0 lg:mx-auto">
+              <div className="flex items-start flex-col justify-between w-full">
+                <span>
+                  Maharaj Vijayaram Gajapathi Raj College of Engineering
+                </span>
+                <span>2020 - 2024</span>
+              </div>
+              <div className="text-sm text-gray-600 dark:text-gray-300 flex flex-col">
+                <span>Bachelor of Technology, Information Technology</span>
+                <span className="font-bold text-blue-600 dark:text-emerald-400">
+                  CGPA: 8.10
+                </span>
+              </div>
+            </div>
+            <div className="flex flex-col w-[300px] items-start justify-start mt-3 py-5 lg:py-0 lg:mx-auto">
+              <div className="flex flex-col items-start justify-between w-full">
+                <span>Sri Chaitanya Jr. College</span>
+                <span>2018 - 2020</span>
+              </div>
+              <div className="text-sm text-gray-600 dark:text-gray-300 flex flex-col">
+                <span className="font-bold text-blue-600 dark:text-emerald-400">
+                  CGPA: 9.50
+                </span>
+              </div>
+            </div>
+            <div className="flex flex-col w-[300px] items-start justify-center mt-3 py-5 lg:py-0 lg:mx-auto">
+              <div className="flex flex-col items-start justify-between w-full">
+                <span>Sri Chaitanya Techno School</span>
+                <span>2017 - 2018</span>
+              </div>
+              <div className="text-sm  text-gray-600 dark:text-gray-300 flex flex-col">
+                <span className="font-bold text-blue-600 dark:text-emerald-400">
+                  CGPA: 10.0
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <Separator className="dark:bg-gray-200 bg-gray-900 my-7" />
       <div>
         <span className="font-medium text-xl">Certifications</span>
-        <div>
-          <div className="flex flex-col items-start justify-center mt-3">
-            <span className="">
-              Wipro TalentNext JAVA by{" "}
-              <span className="font-medium">Wipro</span>
-            </span>
-            <span className="text-gray-500">Oct, 2023</span>
+        <div className="flex flex-col items-start justify-center mt-3">
+          <div
+            ref={textRef1}
+            className="relative inline-block cursor-pointer"
+            onMouseEnter={(e) => handleCertMouseEnter(e, textRef1)}
+            onMouseMove={(e) => handleCertMouseMove(e, textRef1)}
+            onMouseLeave={handleCertMouseLeave}
+          >
+            <div className="flex flex-col items-start justify-center mt-3">
+              <span className="">
+                Wipro TalentNext JAVA by{" "}
+                <span className="font-medium">Wipro</span>
+              </span>
+              <span className="text-gray-500">Oct, 2023</span>
+              {textRef1 === isHovered1 && (
+                <div className="absolute w-full h-full flex items-center justify-center">
+                  <Image
+                    width={300}
+                    height={500}
+                    className="relative z-10 border border-gray-300 shadow-lg pointer-events-none"
+                    style={{ top: position.y + 20, left: position.x + 20 }}
+                    src="/wiproTalentNext.png"
+                    alt="wiproTalentNext"
+                  />
+                </div>
+              )}
+            </div>
           </div>
-          <div className="flex flex-col items-start justify-center mt-3">
-            <span className="">
-              Backend Development with APIs by{" "}
-              <span className="font-medium">freeCodeCamp</span>
-            </span>
-            <span className="text-gray-500">Sep, 2023</span>
+          <div
+            ref={textRef2}
+            className="relative inline-block cursor-pointer"
+            onMouseEnter={(e) => handleCertMouseEnter(e, textRef2)}
+            onMouseMove={(e) => handleCertMouseMove(e, textRef2)}
+            onMouseLeave={handleCertMouseLeave}
+          >
+            <div className="flex flex-col items-start justify-center mt-3">
+              <span className="">
+                Backend Development with APIs by{" "}
+                <span className="font-medium">freeCodeCamp</span>
+              </span>
+              <span className="text-gray-500">Sep, 2023</span>
+              {isHovered1 === textRef2 && (
+                <div className="absolute w-full h-full flex items-center justify-center">
+                  <Image
+                    width={500}
+                    height={300}
+                    className="relative z-10 border border-gray-300 shadow-lg pointer-events-none"
+                    style={{ top: position.y + 20, left: position.x + 20 }}
+                    src="/BackendDevelopment.png"
+                    alt="wiproTalentNext"
+                  />
+                </div>
+              )}
+            </div>
           </div>
-          <div className="flex flex-col items-start justify-center mt-3">
-            <span className="">
-              Advanced React by <span className="font-medium">Coursera</span>
-            </span>
-            <span className="text-gray-500">Jul, 2023</span>
+          <div
+            ref={textRef3}
+            className="relative inline-block cursor-pointer"
+            onMouseEnter={(e) => handleCertMouseEnter(e, textRef3)}
+            onMouseMove={(e) => handleCertMouseMove(e, textRef3)}
+            onMouseLeave={handleCertMouseLeave}
+          >
+            <div className="flex flex-col items-start justify-center mt-3">
+              <span className="">
+                Advanced React by <span className="font-medium">Coursera</span>
+              </span>
+              <span className="text-gray-500">Jul, 2023</span>
+              {isHovered1 === textRef3 && (
+                <div className="absolute w-full h-full flex items-center justify-center">
+                  <Image
+                    width={500}
+                    height={400}
+                    className="relative z-10 border border-gray-300 shadow-lg pointer-events-none"
+                    style={{ top: position.y + 20, left: position.x + 20 }}
+                    src="/AdvancedReact.png"
+                    alt="wiproTalentNext"
+                  />
+                </div>
+              )}
+            </div>
           </div>
-          <div className="flex flex-col items-start justify-center mt-3">
-            <span className="">
-              Frontend Development Libraries by{" "}
-              <span className="font-medium">freeCodeCamp</span>
-            </span>
-            <span className="text-gray-500">Jul, 2023</span>
+          <div
+            ref={textRef4}
+            className="relative inline-block cursor-pointer"
+            onMouseEnter={(e) => handleCertMouseEnter(e, textRef4)}
+            onMouseMove={(e) => handleCertMouseMove(e, textRef4)}
+            onMouseLeave={handleCertMouseLeave}
+          >
+            <div className="flex flex-col items-start justify-center mt-3">
+              <span className="">
+                Frontend Development Libraries by{" "}
+                <span className="font-medium">freeCodeCamp</span>
+              </span>
+              <span className="text-gray-500">Jul, 2023</span>
+              {isHovered1 === textRef4 && (
+                <div className="absolute w-full h-full flex items-center justify-center">
+                  <Image
+                    width={500}
+                    height={300}
+                    className="relative z-10 border border-gray-300 shadow-lg pointer-events-none"
+                    style={{ top: position.y + 20, left: position.x + 20 }}
+                    src="/FrontendLibraries.png"
+                    alt="wiproTalentNext"
+                  />
+                </div>
+              )}
+            </div>
           </div>
-          <div className="flex flex-col items-start justify-center mt-3">
-            <span className="">
-              Masai's Part time Web Development by{" "}
-              <span className="font-medium">MasaiSchool</span>
-            </span>
-            <span className="text-gray-500">Jan, 2023</span>
+          <div
+            ref={textRef5}
+            onMouseEnter={(e) => handleCertMouseEnter(e, textRef5)}
+            onMouseMove={(e) => handleCertMouseMove(e, textRef5)}
+            onMouseLeave={handleCertMouseLeave}
+            className="relative inline-block cursor-pointer"
+          >
+            <div className="flex flex-col items-start justify-center mt-3">
+              <span className="">
+                Masai's Part time Web Development by{" "}
+                <span className="font-medium">MasaiSchool</span>
+              </span>
+              <span className="text-gray-500">Jan, 2023</span>
+              {isHovered1 === textRef5 && (
+                <div className="absolute w-full h-full flex items-center justify-center">
+                  <Image
+                    width={300}
+                    height={500}
+                    className="relative z-10 border border-gray-300 shadow-lg pointer-events-none"
+                    style={{ top: position.y + 20, left: position.x + 20 }}
+                    src="/wiproTalentNext.png"
+                    alt="wiproTalentNext"
+                  />
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
