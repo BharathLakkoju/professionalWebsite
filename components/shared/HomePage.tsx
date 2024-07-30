@@ -613,7 +613,7 @@ export default function HomePage() {
               <CircleCheck className="size-7 text-green-100 bg-green-400 rounded-full" />
             </div>
           </div>
-          <div className="lg:px-10 flex flex-col lg:flex-row items-start justify-center">
+          <div className="lg:px-10 flex flex-col lg:flex-row-reverse items-start justify-center">
             <div className="flex flex-col w-[300px] lg:w-[500px] items-start justify-start mt-3 py-5 lg:py-0 lg:mx-auto">
               <div className="flex items-start flex-col justify-between w-full">
                 <span>
@@ -628,7 +628,7 @@ export default function HomePage() {
                 </span>
               </div>
             </div>
-            <div className="flex flex-col w-[300px] items-start justify-start mt-3 py-5 lg:py-0 lg:mx-auto">
+            <div className="flex flex-col lg:ml-32 w-[300px] items-start justify-start mt-3 py-5 lg:py-0 lg:mx-auto">
               <div className="flex flex-col items-start justify-between w-full">
                 <span>Sri Chaitanya Jr. College</span>
                 <span>2018 - 2020</span>
@@ -639,7 +639,7 @@ export default function HomePage() {
                 </span>
               </div>
             </div>
-            <div className="flex flex-col w-[300px] items-start justify-center mt-3 py-5 lg:py-0 lg:mx-auto">
+            <div className="flex flex-col lg:ml-20 w-[300px] items-start justify-center mt-3 py-5 lg:py-0 lg:mx-auto">
               <div className="flex flex-col items-start justify-between w-full">
                 <span>Sri Chaitanya Techno School</span>
                 <span>2017 - 2018</span>
@@ -656,140 +656,170 @@ export default function HomePage() {
       <Separator className="dark:bg-gray-200 bg-gray-900 my-7" />
       <div>
         <span className="font-medium text-xl">Certifications</span>
-        <div className="flex flex-col items-start justify-center mt-3">
-          <div
-            ref={textRef1}
-            className="relative inline-block cursor-pointer"
-            onMouseEnter={(e) => handleCertMouseEnter(e, textRef1)}
-            onMouseMove={(e) => handleCertMouseMove(e, textRef1)}
-            onMouseLeave={handleCertMouseLeave}
-          >
-            <div className="flex flex-col items-start justify-center mt-3">
-              <span className="">
-                Wipro TalentNext JAVA by{" "}
-                <span className="font-medium">Wipro</span>
-              </span>
-              <span className="text-gray-500">Oct, 2023</span>
-              {textRef1 === isHovered1 && (
-                <div className="absolute w-full h-full flex items-center justify-center">
-                  <Image
-                    width={300}
-                    height={500}
-                    className="relative z-10 border border-gray-300 shadow-lg pointer-events-none"
-                    style={{ top: position.y + 20, left: position.x + 20 }}
-                    src="/wiproTalentNext.png"
-                    alt="wiproTalentNext"
-                  />
-                </div>
-              )}
+        <div className="flex gap-3">
+          <div className="flex">
+            <Separator
+              orientation="vertical"
+              className="dark:bg-purple-500 bg-gradient-to-b from-orange-400 to-purple-400 w-1 rounded-full mt-7 h-[calc(100%-2rem)] flex ml-4"
+            />
+            <div className="flex flex-col items-center justify-around w-full relative z-10 mt-5 -translate-x-4">
+              <CircleCheck className="size-7 text-green-100 bg-blue-400 rounded-full" />
+              <CircleCheck className="size-7 mt-24 lg:mt-16 text-blue-100 bg-blue-400 rounded-full" />
+              <CircleCheck className="size-7 mt-24 lg:mt-0 text-blue-100 bg-blue-400 rounded-full" />
+              <CircleCheck className="size-7 mt-24 lg:mt-0 text-blue-100 bg-blue-400 rounded-full" />
+              <CircleCheck className="size-7 mt-24 lg:mt-0 text-blue-100 bg-blue-400 rounded-full" />
             </div>
           </div>
-          <div
-            ref={textRef2}
-            className="relative inline-block cursor-pointer"
-            onMouseEnter={(e) => handleCertMouseEnter(e, textRef2)}
-            onMouseMove={(e) => handleCertMouseMove(e, textRef2)}
-            onMouseLeave={handleCertMouseLeave}
-          >
-            <div className="flex flex-col items-start justify-center mt-3">
-              <span className="">
-                Backend Development with APIs by{" "}
-                <span className="font-medium">freeCodeCamp</span>
-              </span>
-              <span className="text-gray-500">Sep, 2023</span>
-              {isHovered1 === textRef2 && (
-                <div className="absolute w-full h-full flex items-center justify-center">
-                  <Image
-                    width={500}
-                    height={300}
-                    className="relative z-10 border border-gray-300 shadow-lg pointer-events-none"
-                    style={{ top: position.y + 20, left: position.x + 20 }}
-                    src="/BackendDevelopment.png"
-                    alt="wiproTalentNext"
-                  />
-                </div>
-              )}
-            </div>
-          </div>
-          <div
-            ref={textRef3}
-            className="relative inline-block cursor-pointer"
-            onMouseEnter={(e) => handleCertMouseEnter(e, textRef3)}
-            onMouseMove={(e) => handleCertMouseMove(e, textRef3)}
-            onMouseLeave={handleCertMouseLeave}
-          >
-            <div className="flex flex-col items-start justify-center mt-3">
-              <span className="">
-                Advanced React by <span className="font-medium">Coursera</span>
-              </span>
-              <span className="text-gray-500">Jul, 2023</span>
-              {isHovered1 === textRef3 && (
-                <div className="absolute w-full h-full flex items-center justify-center">
-                  <Image
-                    width={500}
-                    height={400}
-                    className="relative z-10 border border-gray-300 shadow-lg pointer-events-none"
-                    style={{ top: position.y + 20, left: position.x + 20 }}
-                    src="/AdvancedReact.png"
-                    alt="wiproTalentNext"
-                  />
-                </div>
-              )}
-            </div>
-          </div>
-          <div
-            ref={textRef4}
-            className="relative inline-block cursor-pointer"
-            onMouseEnter={(e) => handleCertMouseEnter(e, textRef4)}
-            onMouseMove={(e) => handleCertMouseMove(e, textRef4)}
-            onMouseLeave={handleCertMouseLeave}
-          >
-            <div className="flex flex-col items-start justify-center mt-3">
-              <span className="">
-                Frontend Development Libraries by{" "}
-                <span className="font-medium">freeCodeCamp</span>
-              </span>
-              <span className="text-gray-500">Jul, 2023</span>
-              {isHovered1 === textRef4 && (
-                <div className="absolute w-full h-full flex items-center justify-center">
-                  <Image
-                    width={500}
-                    height={300}
-                    className="relative z-10 border border-gray-300 shadow-lg pointer-events-none"
-                    style={{ top: position.y + 20, left: position.x + 20 }}
-                    src="/FrontendLibraries.png"
-                    alt="wiproTalentNext"
-                  />
-                </div>
-              )}
-            </div>
-          </div>
-          <div
-            ref={textRef5}
-            onMouseEnter={(e) => handleCertMouseEnter(e, textRef5)}
-            onMouseMove={(e) => handleCertMouseMove(e, textRef5)}
-            onMouseLeave={handleCertMouseLeave}
-            className="relative inline-block cursor-pointer"
-          >
-            <div className="flex flex-col items-start justify-center mt-3">
-              <span className="">
-                Masai's Part time Web Development by{" "}
-                <span className="font-medium">MasaiSchool</span>
-              </span>
-              <span className="text-gray-500">Jan, 2023</span>
-              {isHovered1 === textRef5 && (
-                <div className="absolute w-full h-full flex items-center justify-center">
-                  <Image
-                    width={300}
-                    height={500}
-                    className="relative z-10 border border-gray-300 shadow-lg pointer-events-none"
-                    style={{ top: position.y + 20, left: position.x + 20 }}
-                    src="/wiproTalentNext.png"
-                    alt="wiproTalentNext"
-                  />
-                </div>
-              )}
-            </div>
+          <div className="flex flex-col items-start justify-center mt-3 gap-7 lg:gap-5">
+            <Link
+              href="/wiproTalenNext.png"
+              // ref={textRef1}
+              className="flex flex-col lg:flex-row cursor-pointer gap-3 lg:gap-5"
+              // onMouseEnter={(e) => handleCertMouseEnter(e, textRef1)}
+              // onMouseMove={(e) => handleCertMouseMove(e, textRef1)}
+              // onMouseLeave={handleCertMouseLeave}
+            >
+              <div>
+                <Image
+                  width={100}
+                  height={50}
+                  className="shadow-lg pointer-events-none"
+                  // style={{ top: position.y + 20, left: position.x + 20 }}
+                  src="/wiproTalentNext.png"
+                  alt="wiproTalentNext"
+                />
+              </div>
+              <div className="flex flex-col items-start justify-center mt-3">
+                <span className="">
+                  Wipro TalentNext JAVA by{" "}
+                  <span className="font-medium">Wipro</span>
+                </span>
+                <span className="text-gray-500">Oct, 2023</span>
+                {textRef1 === isHovered1 && (
+                  <div className="absolute w-full h-full flex items-center justify-center"></div>
+                )}
+              </div>
+            </Link>
+            <Link
+              href="/BackendDevelopment.png"
+              // ref={textRef2}
+              // className="relative inline-block cursor-pointer"
+              className="flex flex-col lg:flex-row cursor-pointer gap-5"
+              // onMouseEnter={(e) => handleCertMouseEnter(e, textRef2)}
+              // onMouseMove={(e) => handleCertMouseMove(e, textRef2)}
+              // onMouseLeave={handleCertMouseLeave}
+            >
+              <div>
+                <Image
+                  width={100}
+                  height={50}
+                  className="shadow-lg pointer-events-none"
+                  // style={{ top: position.y + 20, left: position.x + 20 }}
+                  src="/BackendDevelopment.png"
+                  alt="wiproTalentNext"
+                />
+              </div>
+              <div className="flex flex-col items-start justify-center mt-3">
+                <span className="">
+                  Backend Development with APIs by{" "}
+                  <span className="font-medium">freeCodeCamp</span>
+                </span>
+                <span className="text-gray-500">Sep, 2023</span>
+                {isHovered1 === textRef2 && (
+                  <div className="absolute w-full h-full flex items-center justify-center"></div>
+                )}
+              </div>
+            </Link>
+            <Link
+              href="/AdvancedReact.png"
+              // ref={textRef3}
+              // className="relative inline-block cursor-pointer"
+              className="flex flex-col lg:flex-row cursor-pointer gap-3 lg:gap-5"
+              // onMouseEnter={(e) => handleCertMouseEnter(e, textRef3)}
+              // onMouseMove={(e) => handleCertMouseMove(e, textRef3)}
+              // onMouseLeave={handleCertMouseLeave}
+            >
+              <div>
+                <Image
+                  width={100}
+                  height={50}
+                  className="relative z-10 border border-gray-300 shadow-lg pointer-events-none"
+                  // style={{ top: position.y + 20, left: position.x + 20 }}
+                  src="/AdvancedReact.png"
+                  alt="wiproTalentNext"
+                />
+              </div>
+              <div className="flex flex-col items-start justify-center mt-3">
+                <span className="">
+                  Advanced React by{" "}
+                  <span className="font-medium">Coursera</span>
+                </span>
+                <span className="text-gray-500">Jul, 2023</span>
+                {isHovered1 === textRef3 && (
+                  <div className="absolute w-full h-full flex items-center justify-center"></div>
+                )}
+              </div>
+            </Link>
+            <Link
+              href="/FrontendLibraries.png"
+              className="flex flex-col lg:flex-row cursor-pointer gap-5"
+              // ref={textRef4}
+              // className="relative inline-block cursor-pointer"
+              // onMouseEnter={(e) => handleCertMouseEnter(e, textRef4)}
+              // onMouseMove={(e) => handleCertMouseMove(e, textRef4)}
+              // onMouseLeave={handleCertMouseLeave}
+            >
+              <div>
+                <Image
+                  width={100}
+                  height={50}
+                  className="relative z-10 border border-gray-300 shadow-lg pointer-events-none"
+                  // style={{ top: position.y + 20, left: position.x + 20 }}
+                  src="/FrontendLibraries.png"
+                  alt="wiproTalentNext"
+                />
+              </div>
+              <div className="flex flex-col items-start justify-center mt-3">
+                <span className="">
+                  Frontend Development Libraries by{" "}
+                  <span className="font-medium">freeCodeCamp</span>
+                </span>
+                <span className="text-gray-500">Jul, 2023</span>
+                {isHovered1 === textRef4 && (
+                  <div className="absolute w-full h-full flex items-center justify-center"></div>
+                )}
+              </div>
+            </Link>
+            <Link
+              href="/masai.png"
+              className="flex flex-col lg:flex-row cursor-pointer gap-5"
+              // ref={textRef5}
+              // onMouseEnter={(e) => handleCertMouseEnter(e, textRef5)}
+              // onMouseMove={(e) => handleCertMouseMove(e, textRef5)}
+              // onMouseLeave={handleCertMouseLeave}
+              // className="relative inline-block cursor-pointer"
+            >
+              <div>
+                <Image
+                  width={100}
+                  height={50}
+                  className="relative z-10 border border-gray-300 shadow-lg pointer-events-none"
+                  // style={{ top: position.y + 20, left: position.x + 20 }}
+                  src="/masai.png"
+                  alt="wiproTalentNext"
+                />
+              </div>
+              <div className="flex flex-col items-start justify-center mt-3">
+                <span className="">
+                  Masai's Part time Web Development by{" "}
+                  <span className="font-medium">MasaiSchool</span>
+                </span>
+                <span className="text-gray-500">Jan, 2023</span>
+                {isHovered1 === textRef5 && (
+                  <div className="absolute w-full h-full flex items-center justify-center"></div>
+                )}
+              </div>
+            </Link>
           </div>
         </div>
       </div>
