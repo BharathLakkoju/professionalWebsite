@@ -391,43 +391,6 @@ export default function HomePage() {
               <video
                 ref={videoRef2}
                 className="object-cover h-full w-full"
-                src="/final_tChecker.mp4"
-                loop
-                muted
-                playsInline
-              ></video>
-            </div>
-            <div className="flex flex-col items-start">
-              <span className="text-xl font-bold w-fit text-zinc-100 dark:text-gray-100 bg-black mt-3 p-1">
-                T&C Privacy Policy Checking Browser Extension - T&Checker
-              </span>
-              <span className="text-lg lg:text-sm text-zinc-700 dark:text-gray-300 my-2">
-                A terms and conditions checking web browser extension.
-              </span>
-              <Link
-                href="https://github.com/bharathlakkoju/T_Checker"
-                target="_blank"
-              >
-                <span className="flex items-center justify-start underline underline-offset-4 font-medium">
-                  <ArrowTopRightIcon className="size-4 mr-1" />
-                  link
-                </span>
-              </Link>
-            </div>
-          </div>
-          <div
-            className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start w-full mx-auto p-4 relative"
-            onMouseEnter={() => handleVideoMouseEnter(videoRef3)}
-            onMouseLeave={() => handleVideoMouseLeave(videoRef3)}
-          >
-            <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
-            <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
-            <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
-            <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-            <div className="bg-center bg-cover h-[20rem] w-full">
-              <video
-                ref={videoRef3}
-                className="object-cover h-full w-full"
                 src="/final_aio.mp4"
                 loop
                 muted
@@ -456,8 +419,8 @@ export default function HomePage() {
           </div>
           <div
             className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start w-full mx-auto p-4 relative"
-            onMouseEnter={() => handleVideoMouseEnter(videoRef4)}
-            onMouseLeave={() => handleVideoMouseLeave(videoRef4)}
+            onMouseEnter={() => handleVideoMouseEnter(videoRef3)}
+            onMouseLeave={() => handleVideoMouseLeave(videoRef3)}
           >
             <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
@@ -465,7 +428,7 @@ export default function HomePage() {
             <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
             <div className="bg-center bg-cover h-[20rem] w-full">
               <video
-                ref={videoRef4}
+                ref={videoRef3}
                 className="object-cover h-full w-full"
                 src="/final_swapi.mp4"
                 loop
@@ -495,8 +458,8 @@ export default function HomePage() {
           </div>
           <div
             className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start w-full mx-auto p-4 relative"
-            onMouseEnter={() => handleVideoMouseEnter(videoRef5)}
-            onMouseLeave={() => handleVideoMouseLeave(videoRef5)}
+            onMouseEnter={() => handleVideoMouseEnter(videoRef4)}
+            onMouseLeave={() => handleVideoMouseLeave(videoRef4)}
           >
             <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
@@ -504,7 +467,7 @@ export default function HomePage() {
             <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
             <div className="bg-center bg-cover h-[20rem] w-full">
               <video
-                ref={videoRef5}
+                ref={videoRef4}
                 className="object-cover h-full w-full"
                 src="/final_hcf.mp4"
                 loop
@@ -534,8 +497,8 @@ export default function HomePage() {
           </div>
           <div
             className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start w-full mx-auto p-4 relative"
-            onMouseEnter={() => handleVideoMouseEnter(videoRef6)}
-            onMouseLeave={() => handleVideoMouseLeave(videoRef6)}
+            onMouseEnter={() => handleVideoMouseEnter(videoRef5)}
+            onMouseLeave={() => handleVideoMouseLeave(videoRef5)}
           >
             <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
             <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
@@ -543,7 +506,7 @@ export default function HomePage() {
             <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
             <div className="bg-center bg-cover h-[20rem] w-full">
               <video
-                ref={videoRef6}
+                ref={videoRef5}
                 className="object-cover h-full w-full"
                 src="/final_potato.mp4"
                 loop
@@ -561,6 +524,45 @@ export default function HomePage() {
               </span>
               <Link
                 href="https://potatoloop.netlify.app"
+                target="_blank"
+                className="w-fit"
+              >
+                <span className="flex items-center justify-start underline underline-offset-4 font-medium">
+                  <ArrowTopRightIcon className="size-4 mr-1" />
+                  link
+                </span>
+              </Link>
+            </div>
+          </div>
+          <div
+            className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start w-full mx-auto p-4 relative"
+            onMouseEnter={() => handleVideoMouseEnter(videoRef6)}
+            onMouseLeave={() => handleVideoMouseLeave(videoRef6)}
+          >
+            <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
+            <div className="bg-center bg-cover h-[20rem] w-full">
+              <video
+                ref={videoRef6}
+                className="object-cover h-full w-full"
+                src="/final_orgs.mp4"
+                loop
+                muted
+                playsInline
+              ></video>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-xl font-bold w-fit text-zinc-100 dark:text-gray-100 bg-black mt-3 p-1">
+                Organic Farming Awareness Website
+              </span>
+              <span className="text-lg lg:text-sm text-zinc-700 dark:text-gray-300 my-2">
+                A web application made for creating awareness on organic
+                farming. Made possible using HTML, CSS and Javascript.
+              </span>
+              <Link
+                href="https://orgafarms.netlify.app"
                 target="_blank"
                 className="w-fit"
               >
