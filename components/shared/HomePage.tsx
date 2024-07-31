@@ -329,7 +329,15 @@ export default function HomePage() {
       <Separator className="dark:bg-gray-200 bg-gray-900 my-7" />
       {/* Projects */}
       <div>
-        <span className="font-medium text-xl">Projects</span>
+        <div className="flex justify-between items-center">
+          <span className="font-medium text-xl">Projects</span>
+          <span className="font-medium hidden lg:flex text-lg">
+            (Hover to Preview)
+          </span>
+          <span className="font-medium flex lg:hidden text-lg">
+            (Click to Preview)
+          </span>
+        </div>
         <div className="mt-3 flex flex-col lg:grid lg:grid-cols-3 gap-5">
           <div
             className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start w-full mx-auto p-4 relative"
@@ -354,7 +362,7 @@ export default function HomePage() {
               <span className="text-xl font-bold w-fit text-zinc-100 dark:text-gray-100 bg-black mt-3 p-1">
                 Task Management App - doit-io
               </span>
-              <span className="text-sm text-zinc-700 dark:text-gray-300 my-2">
+              <span className="text-lg lg:text-sm text-zinc-700 dark:text-gray-300 my-2">
                 A simple task management app built with Next.js, React, Tailwind
                 CSS and PostgreSQL.
               </span>
@@ -393,7 +401,7 @@ export default function HomePage() {
               <span className="text-xl font-bold w-fit text-zinc-100 dark:text-gray-100 bg-black mt-3 p-1">
                 T&C Privacy Policy Checking Browser Extension - T&Checker
               </span>
-              <span className="text-sm text-zinc-700 dark:text-gray-300 my-2">
+              <span className="text-lg lg:text-sm text-zinc-700 dark:text-gray-300 my-2">
                 A terms and conditions checking web browser extension.
               </span>
               <Link
@@ -430,7 +438,7 @@ export default function HomePage() {
               <span className="text-xl font-bold w-fit text-zinc-100 dark:text-gray-100 bg-black mt-3 p-1">
                 API based Movies and Songs Recommendation App
               </span>
-              <span className="text-sm text-zinc-700 dark:text-gray-300 my-2">
+              <span className="text-lg lg:text-sm text-zinc-700 dark:text-gray-300 my-2">
                 A simple movies and songs recommendations using Django Rest
                 Framework, tmdb API and spotify API.
               </span>
@@ -469,7 +477,7 @@ export default function HomePage() {
               <span className="text-xl font-bold w-fit text-zinc-100 dark:text-gray-100 bg-black mt-3 p-1">
                 API based StarWars Data showcase app
               </span>
-              <span className="text-sm text-zinc-700 dark:text-gray-300 my-2">
+              <span className="text-lg lg:text-sm text-zinc-700 dark:text-gray-300 my-2">
                 A simple paginated application that displays StarWars data using
                 React, Vite.js, Node.js and axios library.
               </span>
@@ -508,7 +516,7 @@ export default function HomePage() {
               <span className="text-xl font-bold w-fit text-zinc-100 dark:text-gray-100 bg-black mt-3 p-1">
                 Weather Forecast using city names
               </span>
-              <span className="text-sm text-zinc-700 dark:text-gray-300 my-2">
+              <span className="text-lg lg:text-sm text-zinc-700 dark:text-gray-300 my-2">
                 A simple application that displays weather forecast on city name
                 using HTML5, CSS3, JavaScript and OpenWeatherMap API.
               </span>
@@ -547,7 +555,7 @@ export default function HomePage() {
               <span className="text-xl font-bold w-fit text-zinc-100 dark:text-gray-100 bg-black mt-3 p-1">
                 Fun project to implement physics in web apps
               </span>
-              <span className="text-sm text-zinc-700 dark:text-gray-300 my-2">
+              <span className="text-lg lg:text-sm text-zinc-700 dark:text-gray-300 my-2">
                 A fun application that makes user play with potatoes using
                 React, HTML5, CSS3, JavaScript and Node.js.
               </span>
@@ -572,8 +580,8 @@ export default function HomePage() {
         <div className="mt-3">
           <div className="flex flex-col items-start justify-center mt-3">
             <div className="flex items-start md:items-center flex-col md:flex-row justify-between w-full">
-              <span className="font-semibold">
-                Software Developer Internship Trainee
+              <span className="font-semibold w-fit bg-black text-gray-100 p-1">
+                Developer I - Software Engineering Trainee
               </span>
               <span>4 mo's,&nbsp; April 2024 - Present</span>
             </div>
@@ -587,8 +595,13 @@ export default function HomePage() {
               UST Global
             </span>
             <span className="text-zinc-600 dark:text-gray-300 flex flex-col">
-              <span>- Currently working on learning Java Fundamentals.</span>
-              <span> - Java, Git, SQL.</span>
+              <span>
+                - Currently in Training on learning Java Software Development.
+              </span>
+              <span>
+                - <span className="font-medium">Highlights:</span> Java, Git,
+                SQL.
+              </span>
             </span>
           </div>
         </div>
