@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Icon } from "@/components/ui/evervault-card";
 import Link from "next/link";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
-import { CircleCheck } from "lucide-react";
+import { CircleCheck, Dot, Minus } from "lucide-react";
 
 const skills = [
   {
@@ -592,7 +592,11 @@ export default function HomePage() {
                 height={28}
                 alt="ust"
               />
-              UST Global
+              <span className="font-medium">UST Global</span>
+              <Minus className="size-4 text-gray-700 dark:text-gray-400" />
+              <span className="text-sm text-gray-600 dark:text-gray-400">
+                Apprenticeship
+              </span>
             </span>
             <span className="text-zinc-600 dark:text-gray-300 flex flex-col">
               <span>
@@ -633,13 +637,15 @@ export default function HomePage() {
           <div className="lg:px-10 flex flex-col lg:flex-row-reverse items-start justify-center">
             <div className="flex flex-col w-[300px] lg:w-[500px] items-start justify-start mt-3 py-5 lg:py-0 lg:mx-auto">
               <div className="flex items-start flex-col justify-between w-full">
-                <span>
+                <span className="font-bold">
                   Maharaj Vijayaram Gajapathi Raj College of Engineering
                 </span>
                 <span>2020 - 2024</span>
               </div>
               <div className="text-sm text-gray-600 dark:text-gray-300 flex flex-col">
-                <span>Bachelor of Technology, Information Technology</span>
+                <span className="font-medium">
+                  Bachelor of Technology, Information Technology
+                </span>
                 <span className="font-bold text-blue-600 dark:text-emerald-400">
                   CGPA: 8.10
                 </span>
@@ -647,7 +653,7 @@ export default function HomePage() {
             </div>
             <div className="flex flex-col lg:ml-32 w-[300px] items-start justify-start mt-3 py-5 lg:py-0 lg:mx-auto">
               <div className="flex flex-col items-start justify-between w-full">
-                <span>Sri Chaitanya Jr. College</span>
+                <span className="font-bold">Sri Chaitanya Jr. College</span>
                 <span>2018 - 2020</span>
               </div>
               <div className="text-sm text-gray-600 dark:text-gray-300 flex flex-col">
@@ -658,7 +664,7 @@ export default function HomePage() {
             </div>
             <div className="flex flex-col lg:ml-20 w-[300px] items-start justify-center mt-3 py-5 lg:py-0 lg:mx-auto">
               <div className="flex flex-col items-start justify-between w-full">
-                <span>Sri Chaitanya Techno School</span>
+                <span className="font-bold">Sri Chaitanya Techno School</span>
                 <span>2017 - 2018</span>
               </div>
               <div className="text-sm  text-gray-600 dark:text-gray-300 flex flex-col">
