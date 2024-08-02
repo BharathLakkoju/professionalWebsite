@@ -200,7 +200,7 @@ const skills = [
         ),
       },
       {
-        name: "Frontend Development",
+        name: "Front End Development",
         Icon: (
           <Image
             src="https://img.icons8.com/?size=100&id=qeExHHOSHwIU&format=png&color=000000"
