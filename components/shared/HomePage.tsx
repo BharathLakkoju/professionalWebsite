@@ -129,6 +129,18 @@ const skills = [
           />
         ),
       },
+      {
+        name: "MongoDB",
+        Icon: (
+          <Image
+            src="https://img.icons8.com/?size=100&id=8rKdRqZFLurS&format=png&color=000000"
+            width={16}
+            height={16}
+            alt="mongodb"
+            className="size-4 mr-1"
+          />
+        ),
+      },
     ],
   },
   {
@@ -186,6 +198,18 @@ const skills = [
             alt="data structures and algorithms"
           />
         ),
+      },
+      {
+        name: "Frontend Development",
+        Icon: (
+          <Image
+            src="https://img.icons8.com/?size=100&id=qeExHHOSHwIU&format=png&color=000000"
+            width={16}
+            height={16}
+            className="size-4 mr-1"
+            alt="java"
+          />
+        )
       },
       {
         name: "Full Stack Development",
@@ -293,11 +317,13 @@ export default function HomePage() {
 
   return (
     <>
-      <div className="flex justify-center items-center gap-2 text-xl text-zinc-900 dark:text-gray-100 mt-7">
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-2 text-xl text-zinc-900 dark:text-gray-100 mt-7">
         <span>Full Stack Developer</span>
-        <span> | </span>
+        <div className="lg:hidden w-[calc(100%-15rem)] h-0.5 dark:bg-gray-300 bg-gray-800"></div>
+        <span className="hidden lg:flex"> | </span>
         <span>Frontend Developer</span>
-        <span> | </span>
+        <span className="hidden lg:flex"> | </span>
+        <div className="lg:hidden w-[calc(100%-15rem)] h-0.5 dark:bg-gray-300 bg-gray-800"></div>
         <span>Backend Developer</span>
       </div>
       <Separator className="dark:bg-gray-200 bg-gray-900 my-7" />
