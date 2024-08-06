@@ -19,7 +19,7 @@ export default function Footer() {
           <Link
             className="dark:text-gray-200 font-medium flex justify-center items-center px-1"
             target="_blank"
-            href="https://drive.google.com/file/d/12rqiW5lwV5zOSoWIgZrdLRY0CF1muttL/view?usp=sharing"
+            href="https://drive.google.com/file/d/1_Yslnq7r7DMMhnwkKoacoGH08Yg5fOV5/view?usp=sharing"
           >
             <ArrowTopRightIcon className="size-5 group-hover:-rotate-[30deg]" />
             resume
